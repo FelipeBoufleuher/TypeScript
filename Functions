@@ -1,0 +1,21 @@
+function add(x: number, y: number) {
+  return x + y;
+};
+
+const anonymousAdd = function (x: number, y: number){ // Ainda não entendi direito que benefícios essa declaração anônima traz
+  return x + y;
+};
+
+    console.log(anonymousAdd(5, 7));
+
+const fatArrowAdd = (x: any, y: any) => { // dá um jeito de fundir os tipos
+  return x + y;
+};
+
+    console.log(fatArrowAdd(10, 17));
+    console.log(fatArrowAdd("Pica do ", 67));
+    console.log(fatArrowAdd(0.07, 10));
+
+const typedReturnAdd = (x: string, y: number): string => { // tipar o retorno dá mais segurança na execução e teste da função
+  return x + y;
+};
